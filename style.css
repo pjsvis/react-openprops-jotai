@@ -1,0 +1,49 @@
+/* the props */
+@import "open-props/style";
+
+/* optional imports that use the props */
+@import "open-props/normalize";
+@import "open-props/buttons";
+
+/* individual imports */
+@import "open-props/indigo";
+@import "open-props/easings";
+@import "open-props/animations";
+@import "open-props/sizes";
+@import "open-props/gradients";
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  opacity: 0;
+  animation: var(--animation-fade-in) forwards,
+    var(--animation-slide-in-up) forwards;
+  animation-timing-function: var(--ease-squish-3);
+}
+
+.fluid-gap {
+  display: grid;
+  justify-items: start;
+  gap: var(--size-fluid-3);
+}
+
+.card {
+  /* no radius when fullscreen */
+  border-radius: var(--radius-conditional-3);
+  border: var(--border-size-2) solid var(--gray-1);
+  padding: var(--size-3)
+}
+
+button.blue {
+  color: var(--blue-6);
+  background-color: var(--blue-0);
+  border: 1px solid var(--blue-1);
+  text-shadow: 0 1px 0 var(--blue-2);
+ 
+  &:hover {
+    background-color: var(--blue-1);
+  }
+}
